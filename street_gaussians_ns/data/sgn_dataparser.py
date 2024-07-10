@@ -475,7 +475,7 @@ class ColmapDataParser(DataParser):
 
     def _load_3D_points(self, colmap_path: Path, transform_matrix: torch.Tensor, scale_factor: float):
         points_filepath = colmap_path / self.config.init_points_filename
-        assert points_filepath.exists()
+        assert points_filepath.exists(), f"{points_filepath}"
         if points_filepath.suffix == ".bin":
             colmap_points = colmap_utils.read_points3D_binary(points_filepath)
         elif points_filepath.suffix == ".txt":

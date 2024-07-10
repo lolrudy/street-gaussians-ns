@@ -16,4 +16,4 @@ CUDA_VISIBLE_DEVICES=$cuda_id  sgn-train street-gaussians-ns \
     --undistort True \
     --segments-path segs \
     --filter_camera_id 1 \
-    --init_points_filename points3D_withlidar.txt
+    --init_points_filename points3D_withlidar.bin
